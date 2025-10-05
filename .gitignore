@@ -1,3 +1,6 @@
 analysis/outputs
 .DS_Store
 __pycache__
+OOI_DAS_2024/data
+das24_data/
+daspack/target
