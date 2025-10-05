@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Information Theory Analysis: DAS Compression vs. Vectorization"
+description: "Mathematical analysis of information-theoretic trade-offs between compression-first and vectorize-first architectural approaches."
+---
+
 # Information Theory Analysis: DAS Compression vs. Vectorization
 
 ## Executive Summary

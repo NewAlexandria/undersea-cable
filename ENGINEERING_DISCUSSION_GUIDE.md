@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Engineering Discussion Guide"
+description: "Technical validation questions and discussion points for Google Network Engineer meetings and technical architecture reviews."
+---
+
 # Discussion Guide: Google Network Engineer Meeting
 
 ## Key Technical Questions to Explore

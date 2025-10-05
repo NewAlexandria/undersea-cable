@@ -1,3 +1,9 @@
+---
+layout: default
+title: "CPU-Only Edge Architecture: Alternative Strategy"
+description: "Cost-optimized CPU-based compression at edge with GPU processing in cloud/datacenter for DAS maritime surveillance."
+---
+
 # CPU-Only Edge Architecture: Alternative Strategy
 
 ## Executive Summary

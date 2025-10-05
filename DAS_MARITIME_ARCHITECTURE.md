@@ -1,3 +1,9 @@
+---
+layout: default
+title: "DAS-Based Maritime Surveillance: Technical Architecture Strategy"
+description: "GPU-at-edge system architecture for real-time maritime surveillance using Distributed Acoustic Sensing on submarine cables."
+---
+
 # DAS-Based Maritime Surveillance: Technical Architecture Strategy
 
 ## 1. System Architecture Overview

@@ -1,3 +1,9 @@
+---
+layout: default
+title: "DAS Maritime Surveillance: Technical Implementation Guide"
+description: "Complete technical implementation guide for signal processing pipeline, vessel detection algorithms, and system architecture."
+---
+
 # DAS Maritime Surveillance: Technical Implementation Guide
 
 ## Signal Processing Pipeline Implementation

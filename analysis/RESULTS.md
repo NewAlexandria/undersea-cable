@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Analysis Results"
+description: "Detailed analysis results and findings from DAS data processing and compression analysis."
+---
+
 ## DAS24 compression results (to be filled by pipeline)
 
 This file is appended to by `analysis/das24_analyze_compress.py` as it processes datasets.

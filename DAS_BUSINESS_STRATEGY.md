@@ -1,3 +1,9 @@
+---
+layout: default
+title: "DAS Maritime Surveillance: Business Strategy & Market Analysis"
+description: "Complete business strategy, market analysis, and go-to-market plan for DAS maritime surveillance technology."
+---
+
 # DAS Maritime Surveillance: Business Strategy & Market Analysis
 
 ## Executive Value Proposition

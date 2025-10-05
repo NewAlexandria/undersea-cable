@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Compression-Based Event Detection for DAS Data"
+description: "Complete technical analysis of compression ratio as a proxy for event detection in DAS maritime surveillance systems."
+---
+
 # Compression-Based Event Detection for DAS Data
 
 ## Executive Summary

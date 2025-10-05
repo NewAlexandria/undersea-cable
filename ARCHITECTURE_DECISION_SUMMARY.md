@@ -1,3 +1,9 @@
+---
+layout: default
+title: "DAS Architecture Decision Summary"
+description: "Quick reference guide for choosing between CPU/GPU architectures for Distributed Acoustic Sensing maritime surveillance systems."
+---
+
 # DAS Architecture Decision Summary
 
 ## Quick Reference: Three Architectural Options

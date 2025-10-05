@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Solution Summary: HDF5 Analysis & Error Handling"
+description: "Documentation of problems solved and solutions implemented for HDF5 data analysis and error handling."
+---
+
 # Solution Summary: HDF5 Analysis & Error Handling
 
 ## Problems Addressed

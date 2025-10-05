@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Compression-Based Event Detection: Complete Summary"
+description: "Statistical validation of compression ratio as a real-time event detector for DAS maritime surveillance systems."
+---
+
 # Compression-Based Event Detection: Complete Summary
 
 **Date**: October 5, 2025

@@ -1,0 +1,92 @@
+# GitHub Pages Configuration for DAS Maritime Surveillance Documentation
+title: "Marine Cable DAS Data Analysis & Maritime Surveillance Architecture"
+description: "Distributed Acoustic Sensing (DAS) on marine cables converts fiber optic cables into arrays of thousands of seismic sensors. This repository includes data analysis tools and complete technical/business architecture for maritime surveillance applications."
+author: "DAS Maritime Surveillance Team"
+email: "contact@dasmartime.com"
+
+# Jekyll Configuration
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-relative-links
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Site Settings
+baseurl: "/undersea-cable"
+url: "https://zak.github.io"
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+
+# Include directories
+include:
+  - README.md
+  - EXECUTIVE_SUMMARY.md
+  - ENGINEERING_DISCUSSION_GUIDE.md
+  - ARCHITECTURE_DECISION_SUMMARY.md
+  - COMPRESSION_EVENT_DETECTION_SUMMARY.md
+  - DAS_MARITIME_ARCHITECTURE.md
+  - DAS_CPU_ARCHITECTURE_ALTERNATIVE.md
+  - DAS_TECHNICAL_IMPLEMENTATION.md
+  - INFORMATION_THEORY_ANALYSIS.md
+  - DAS_BUSINESS_STRATEGY.md
+  - analysis/
+
+# Exclude from processing
+exclude:
+  - daspack/
+  - OOI_DAS_2024/
+  - das24_data/
+  - target/
+  - .git/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "default"
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Executive Summary"
+    url: "/EXECUTIVE_SUMMARY/"
+  - title: "Architecture"
+    url: "/ARCHITECTURE_DECISION_SUMMARY/"
+  - title: "Analysis"
+    url: "/analysis/"
+  - title: "Business Strategy"
+    url: "/DAS_BUSINESS_STRATEGY/"
+  - title: "Technical Implementation"
+    url: "/DAS_TECHNICAL_IMPLEMENTATION/"
+
+# Social links
+social:
+  github: zak
+  linkedin: das-maritime-surveillance
+
+# Build settings
+sass:
+  style: compressed

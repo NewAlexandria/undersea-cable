@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Quick Reference: Compression-Based Event Detection"
+description: "Implementation quick-start guide for compression-based event detection in DAS maritime surveillance systems."
+---
+
 # Quick Reference: Compression-Based Event Detection
 
 ## The Discovery

@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Executive Summary: DAS Maritime Surveillance Company"
+description: "Complete business case, financial projections, and technical architecture for transforming submarine fiber optic cables into a global maritime surveillance network."
+---
+
 # Executive Summary: DAS Maritime Surveillance Company
 
 **Prepared for**: Corporate Board Review
