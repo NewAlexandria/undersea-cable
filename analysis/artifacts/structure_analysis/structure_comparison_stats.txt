@@ -1,0 +1,21 @@
+Structure Comparison Statistics
+================================================================================
+
+Overall Statistics:
+  Total comparisons: 452
+  Total items added: 0
+  Total items removed: 0
+  Total items changed: 12
+  Total items unchanged: 157284
+
+Most Frequently Changed Paths:
+----------------------------------------
+  cableSpec/sensorDistances: 3 changes
+  header/channels: 3 changes
+  data: 3 changes
+  header/phiOffs: 3 changes
+
+Change Types:
+----------------------------------------
+  shape: 12 occurrences
+  size: 12 occurrences

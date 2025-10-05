@@ -1,0 +1,35 @@
+Additional Patterns & Best Practices Report
+================================================================================
+
+Total Files: 453
+Total Datasets: 141336
+Compression Usage: 0/141336 (0.0%)
+Chunked Datasets: 0/141336 (0.0%)
+
+File Size Statistics:
+  Min: 76,453,624 bytes
+  Max: 120,563,624 bytes
+  Mean: 79,095,054 bytes
+  Median: 76,453,624 bytes
+
+Data Type Distribution:
+  float64: 50283 (35.6%)
+  int32: 39411 (27.9%)
+  object: 33069 (23.4%)
+  uint32: 8154 (5.8%)
+  int64: 6342 (4.5%)
+  complex128: 1812 (1.3%)
+  uint8: 1359 (1.0%)
+  float32: 906 (0.6%)
+
+Most Common Dataset Paths:
+  acqSpec/YvsXDelay: 453 files
+  acqSpec/adcDec: 453 files
+  acqSpec/dacGainXi: 453 files
+  acqSpec/dacGainXq: 453 files
+  acqSpec/dacGainYi: 453 files
+  acqSpec/dacGainYq: 453 files
+  acqSpec/dacMixerGain: 453 files
+  acqSpec/dacPhaseBalanceX: 453 files
+  acqSpec/dacPhaseBalanceY: 453 files
+  acqSpec/externalClock: 453 files

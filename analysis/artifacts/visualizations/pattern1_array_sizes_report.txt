@@ -1,0 +1,315 @@
+Array Size Distribution Report
+================================================================================
+
+
+Path: cableSpec/sensorDistances
+  Files: 453
+  Size range: 9,500 - 15,000
+  Unique shapes: 4
+  Shapes: (9502,), (9500,), (15000,), (12500,)
+
+Path: data
+  Files: 453
+  Size range: 19,000,000 - 30,000,000
+  Unique shapes: 4
+  Shapes: (2000, 9500), (2000, 15000), (2000, 9502), (2000, 12500)
+
+Path: demodSpec/mixerCoeffX1
+  Files: 453
+  Size range: 3 - 3
+  Unique shapes: 1
+  Shapes: (3,)
+
+Path: demodSpec/mixerCoeffX2
+  Files: 453
+  Size range: 3 - 3
+  Unique shapes: 1
+  Shapes: (3,)
+
+Path: demodSpec/mixerCoeffY1
+  Files: 453
+  Size range: 3 - 3
+  Unique shapes: 1
+  Shapes: (3,)
+
+Path: demodSpec/mixerCoeffY2
+  Files: 453
+  Size range: 3 - 3
+  Unique shapes: 1
+  Shapes: (3,)
+
+Path: demodSpec/roiDec
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: demodSpec/roiEnd
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: demodSpec/roiStart
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: header/channels
+  Files: 453
+  Size range: 9,500 - 15,000
+  Unique shapes: 4
+  Shapes: (9502,), (9500,), (15000,), (12500,)
+
+Path: header/dimensionNames
+  Files: 453
+  Size range: 2 - 2
+  Unique shapes: 1
+  Shapes: (2,)
+
+Path: header/dimensionRanges/dimension1/max
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: header/dimensionRanges/dimension1/min
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: header/dimensionRanges/dimension1/size
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: header/dimensionRanges/dimension1/unitScale
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: header/dimensionSizes
+  Files: 453
+  Size range: 2 - 2
+  Unique shapes: 1
+  Shapes: (2,)
+
+Path: header/dimensionUnits
+  Files: 453
+  Size range: 2 - 2
+  Unique shapes: 1
+  Shapes: (2,)
+
+Path: header/missingSamples
+  Files: 453
+  Size range: 0 - 0
+  Unique shapes: 1
+  Shapes: (0,)
+
+Path: header/phiOffs
+  Files: 453
+  Size range: 9,500 - 15,000
+  Unique shapes: 4
+  Shapes: (9502,), (9500,), (15000,), (12500,)
+
+Path: header/sensitivities
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1, 1)
+
+Path: header/sensitivityUnits
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: header/sensorType
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: instrumentOptions/names
+  Files: 453
+  Size range: 7 - 7
+  Unique shapes: 1
+  Shapes: (7,)
+
+Path: instrumentOptions/values
+  Files: 453
+  Size range: 7 - 7
+  Unique shapes: 1
+  Shapes: (7,)
+
+Path: processingChain/edges
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-0/cols/roiDec
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-0/cols/roiEnd
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-0/cols/roiFiberOverlength
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-0/cols/roiRefractiveIndex
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-0/cols/roiStart
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-0/cols/roiStartPosition
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-0/sensitivities
+  Files: 453
+  Size range: 3 - 3
+  Unique shapes: 1
+  Shapes: (3, 1)
+
+Path: processingChain/step-0/sensitivityFromUnits
+  Files: 453
+  Size range: 3 - 3
+  Unique shapes: 1
+  Shapes: (3,)
+
+Path: processingChain/step-0/sensitivityToUnits
+  Files: 453
+  Size range: 3 - 3
+  Unique shapes: 1
+  Shapes: (3,)
+
+Path: processingChain/step-1/cols/roiDec
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-1/cols/roiEnd
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-1/cols/roiFiberOverlength
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-1/cols/roiRefractiveIndex
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-1/cols/roiStart
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-1/cols/roiStartPosition
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-1/infos
+  Files: 453
+  Size range: 1 - 1
+  Unique shapes: 1
+  Shapes: (1,)
+
+Path: processingChain/step-1/sensitivities
+  Files: 453
+  Size range: 3 - 3
+  Unique shapes: 1
+  Shapes: (3, 1)
+
+Path: processingChain/step-1/sensitivityFromUnits
+  Files: 453
+  Size range: 3 - 3
+  Unique shapes: 1
+  Shapes: (3,)
+
+Path: processingChain/step-1/sensitivityToUnits
+  Files: 453
+  Size range: 3 - 3
+  Unique shapes: 1
+  Shapes: (3,)
+
+Path: sweepSpec/delay_x
+  Files: 453
+  Size range: 16 - 16
+  Unique shapes: 1
+  Shapes: (16,)
+
+Path: sweepSpec/delay_y
+  Files: 453
+  Size range: 16 - 16
+  Unique shapes: 1
+  Shapes: (16,)
+
+Path: sweepSpec/gcoeff_x
+  Files: 453
+  Size range: 14,336 - 14,336
+  Unique shapes: 1
+  Shapes: (1024, 14)
+
+Path: sweepSpec/gcoeff_y
+  Files: 453
+  Size range: 14,336 - 14,336
+  Unique shapes: 1
+  Shapes: (1024, 14)
+
+Path: sweepSpec/swFreqs/f
+  Files: 453
+  Size range: 2 - 2
+  Unique shapes: 1
+  Shapes: (2,)
+
+Path: sweepSpec/swFreqs/t
+  Files: 453
+  Size range: 2 - 2
+  Unique shapes: 1
+  Shapes: (2,)
+
+Path: timing/ppses
+  Files: 453
+  Size range: 0 - 0
+  Unique shapes: 1
+  Shapes: (0,)
+
+Path: timing/triggers
+  Files: 453
+  Size range: 0 - 0
+  Unique shapes: 1
+  Shapes: (0,)
