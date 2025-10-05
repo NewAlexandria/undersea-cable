@@ -1,0 +1,33 @@
+Compression Factor Histogram Summary
+========================================
+
+Total samples: 906
+Original range: 4.40 to 14.81
+Rounded range: 4 to 14
+
+Statistics:
+  Mean: 9.82
+  Median: 8.00
+  Standard Deviation: 3.49
+
+Histogram bins (compression_factor: count):
+  4: 69
+  5: 30
+  6: 20
+  7: 62
+  8: 342
+  9: 31
+  10: 4
+  13: 6
+  14: 342
+
+Percentage distribution:
+  4: 69 (7.6%)
+  5: 30 (3.3%)
+  6: 20 (2.2%)
+  7: 62 (6.8%)
+  8: 342 (37.7%)
+  9: 31 (3.4%)
+  10: 4 (0.4%)
+  13: 6 (0.7%)
+  14: 342 (37.7%)

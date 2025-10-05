@@ -1,8 +1,8 @@
-# Marine Cable DAS Data Analysis
+# Marine Cable DAS Data Analysis & Maritime Surveillance Architecture
 
 ## Overview
 
-Distributed Acoustic Sensing (DAS) on marine cables converts fiber optic cables into arrays of thousands of seismic sensors. Data stored in HDF5 format from Ocean Observatories Initiative (OOI).
+Distributed Acoustic Sensing (DAS) on marine cables converts fiber optic cables into arrays of thousands of seismic sensors. This repository includes data analysis tools and complete technical/business architecture for maritime surveillance applications.
 
 ## HDF5 Format
 
@@ -12,6 +12,30 @@ Hierarchical Data Format 5 - scientific data container supporting:
 - Metadata and attributes
 - Multi-dimensional arrays
 - Cross-platform compatibility
+
+## Architecture Documentation
+
+**Quick Start**: See [ARCHITECTURE_DECISION_SUMMARY.md](./ARCHITECTURE_DECISION_SUMMARY.md) for choosing between CPU/GPU architectures.
+
+### Technical Architecture
+
+- **[DAS_MARITIME_ARCHITECTURE.md](./DAS_MARITIME_ARCHITECTURE.md)** - GPU-at-edge system architecture
+- **[DAS_CPU_ARCHITECTURE_ALTERNATIVE.md](./DAS_CPU_ARCHITECTURE_ALTERNATIVE.md)** - CPU-based compress-first strategy (cost-optimized)
+- **[DAS_TECHNICAL_IMPLEMENTATION.md](./DAS_TECHNICAL_IMPLEMENTATION.md)** - Implementation details
+
+### Analysis & Strategy
+
+- **[INFORMATION_THEORY_ANALYSIS.md](./INFORMATION_THEORY_ANALYSIS.md)** - Compression vs. vectorization trade-offs
+- **[DAS_BUSINESS_STRATEGY.md](./DAS_BUSINESS_STRATEGY.md)** - Market analysis and business model
+- **[GOOGLE_ENGINEER_DISCUSSION_GUIDE.md](./GOOGLE_ENGINEER_DISCUSSION_GUIDE.md)** - Technical validation questions
+
+### Key Findings
+
+**CPU vs GPU at Edge**: Information theory shows lossy compression (6-10x) preserves >97% of vessel detection information. CPU-based compression at edge with GPU processing in regional datacenters provides:
+
+- **Cost savings**: \$150-250k per site
+- **Flexibility**: Can reprocess with new algorithms
+- **Acceptable latency**: 1-3 seconds vs. <1 second
 
 ## Tools
 
