@@ -248,24 +248,24 @@ blockquote {
     .container {
         padding: 0 15px;
     }
-    
+
     .site-nav ul {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.5rem;
     }
-    
+
     table {
         font-size: 0.9rem;
     }
-    
+
     th, td {
         padding: 0.5rem;
     }
@@ -277,11 +277,11 @@ blockquote {
     .site-footer {
         display: none;
     }
-    
+
     .main-content {
         padding: 0;
     }
-    
+
     a {
         color: black;
         text-decoration: underline;
