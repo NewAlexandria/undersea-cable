@@ -1,0 +1,6 @@
+[submodule "daspack"]
+	path = daspack
+	url = https://github.com/asleix/daspack.git
+[submodule "OOI_DAS_2024"]
+	path = OOI_DAS_2024
+	url = https://github.com/uwfiberlab/OOI_DAS_2024.git
