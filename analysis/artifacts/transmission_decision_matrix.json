@@ -1,0 +1,17 @@
+{
+  "compression_ratio_thresholds": {
+    "normal_low_center": 8.139262680378241,
+    "normal_high_center": 14.58010894495775,
+    "anomaly_lower_bound": 7.0,
+    "anomaly_upper_bound": 13.0
+  },
+  "transmission_rules": {
+    "priority_high": "compression_factor < 7 OR compression_factor > 13",
+    "priority_medium": "(9 < compression_factor < 13) OR (std > threshold)",
+    "priority_low": "7 <= compression_factor <= 9 OR 13 <= compression_factor <= 15"
+  },
+  "thresholds": {
+    "std_threshold": 2.292858839035034,
+    "dynamic_range_threshold": 40.12004264450087
+  }
+}

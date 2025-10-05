@@ -1,0 +1,290 @@
+{
+  "lowest_compression": [
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/160232.hdf5",
+      "compression_factor": 4.396057914194489,
+      "std": 11.284332275390623,
+      "dynamic_range": 112.3930918121341,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/160222.hdf5",
+      "compression_factor": 4.403518340697924,
+      "std": 11.248628616333008,
+      "dynamic_range": 111.4414413681031,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161418.hdf5",
+      "compression_factor": 4.475285492553398,
+      "std": 9.932637214660645,
+      "dynamic_range": 109.58960511779847,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161348.hdf5",
+      "compression_factor": 4.485777560643651,
+      "std": 9.85210418701172,
+      "dynamic_range": 109.04099182128965,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161308.hdf5",
+      "compression_factor": 4.502365850630625,
+      "std": 9.861167907714844,
+      "dynamic_range": 108.89622354126004,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161248.hdf5",
+      "compression_factor": 4.504418823251395,
+      "std": 9.718040466308594,
+      "dynamic_range": 108.50314689636383,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161328.hdf5",
+      "compression_factor": 4.508822144950423,
+      "std": 9.66397476196289,
+      "dynamic_range": 108.319864250184,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161258.hdf5",
+      "compression_factor": 4.509492441249232,
+      "std": 9.767291069030762,
+      "dynamic_range": 108.91461095809986,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161428.hdf5",
+      "compression_factor": 4.511636801367261,
+      "std": 9.765646934509276,
+      "dynamic_range": 108.30256670761146,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161318.hdf5",
+      "compression_factor": 4.5214937798233095,
+      "std": 9.677837371826172,
+      "dynamic_range": 108.0588208045962,
+      "category": "anomaly_low"
+    }
+  ],
+  "highest_std": [
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/160232.hdf5",
+      "compression_factor": 6.292574774351415,
+      "std": 11.284332275390623,
+      "dynamic_range": 112.3930918121341,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/160232.hdf5",
+      "compression_factor": 4.396057914194489,
+      "std": 11.284332275390623,
+      "dynamic_range": 112.3930918121341,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/160222.hdf5",
+      "compression_factor": 4.403518340697924,
+      "std": 11.248628616333008,
+      "dynamic_range": 111.4414413681031,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/160222.hdf5",
+      "compression_factor": 6.306643910613666,
+      "std": 11.248628616333008,
+      "dynamic_range": 111.4414413681031,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161418.hdf5",
+      "compression_factor": 4.475285492553398,
+      "std": 9.932637214660645,
+      "dynamic_range": 109.58960511779847,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161418.hdf5",
+      "compression_factor": 6.462070149199047,
+      "std": 9.932637214660645,
+      "dynamic_range": 109.58960511779847,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161308.hdf5",
+      "compression_factor": 4.502365850630625,
+      "std": 9.861167907714844,
+      "dynamic_range": 108.89622354126004,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161308.hdf5",
+      "compression_factor": 6.516775793970576,
+      "std": 9.861167907714844,
+      "dynamic_range": 108.89622354126004,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161348.hdf5",
+      "compression_factor": 4.485777560643651,
+      "std": 9.85210418701172,
+      "dynamic_range": 109.04099182128965,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161348.hdf5",
+      "compression_factor": 6.482916930548289,
+      "std": 9.85210418701172,
+      "dynamic_range": 109.04099182128965,
+      "category": "anomaly_low"
+    }
+  ],
+  "highest_dynamic_range": [
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/160232.hdf5",
+      "compression_factor": 6.292574774351415,
+      "std": 11.284332275390623,
+      "dynamic_range": 112.3930918121341,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/160232.hdf5",
+      "compression_factor": 4.396057914194489,
+      "std": 11.284332275390623,
+      "dynamic_range": 112.3930918121341,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/160222.hdf5",
+      "compression_factor": 4.403518340697924,
+      "std": 11.248628616333008,
+      "dynamic_range": 111.4414413681031,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/160222.hdf5",
+      "compression_factor": 6.306643910613666,
+      "std": 11.248628616333008,
+      "dynamic_range": 111.4414413681031,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161418.hdf5",
+      "compression_factor": 4.475285492553398,
+      "std": 9.932637214660645,
+      "dynamic_range": 109.58960511779847,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161418.hdf5",
+      "compression_factor": 6.462070149199047,
+      "std": 9.932637214660645,
+      "dynamic_range": 109.58960511779847,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161348.hdf5",
+      "compression_factor": 4.485777560643651,
+      "std": 9.85210418701172,
+      "dynamic_range": 109.04099182128965,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161348.hdf5",
+      "compression_factor": 6.482916930548289,
+      "std": 9.85210418701172,
+      "dynamic_range": 109.04099182128965,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161258.hdf5",
+      "compression_factor": 6.527061597855865,
+      "std": 9.767291069030762,
+      "dynamic_range": 108.91461095809986,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161258.hdf5",
+      "compression_factor": 4.509492441249232,
+      "std": 9.767291069030762,
+      "dynamic_range": 108.91461095809986,
+      "category": "anomaly_low"
+    }
+  ],
+  "highest_complexity": [
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/160232.hdf5",
+      "compression_factor": 4.396057914194489,
+      "std": 11.284332275390623,
+      "signal_complexity": 2.566920749372863,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/160222.hdf5",
+      "compression_factor": 4.403518340697924,
+      "std": 11.248628616333008,
+      "signal_complexity": 2.5544638959196853,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161418.hdf5",
+      "compression_factor": 4.475285492553398,
+      "std": 9.932637214660645,
+      "signal_complexity": 2.2194421408841842,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161348.hdf5",
+      "compression_factor": 4.485777560643651,
+      "std": 9.85210418701172,
+      "signal_complexity": 2.1962979781810827,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161308.hdf5",
+      "compression_factor": 4.502365850630625,
+      "std": 9.861167907714844,
+      "signal_complexity": 2.1902191503015325,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161258.hdf5",
+      "compression_factor": 4.509492441249232,
+      "std": 9.767291069030762,
+      "signal_complexity": 2.165940224156358,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161428.hdf5",
+      "compression_factor": 4.511636801367261,
+      "std": 9.765646934509276,
+      "signal_complexity": 2.1645463419284496,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161248.hdf5",
+      "compression_factor": 4.504418823251395,
+      "std": 9.718040466308594,
+      "signal_complexity": 2.1574460208151525,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161328.hdf5",
+      "compression_factor": 4.508822144950423,
+      "std": 9.66397476196289,
+      "signal_complexity": 2.143347963455576,
+      "category": "anomaly_low"
+    },
+    {
+      "file": "/Users/zak/src/undersea-cable/das24_data/20240506/dphi/161318.hdf5",
+      "compression_factor": 4.5214937798233095,
+      "std": 9.677837371826172,
+      "signal_complexity": 2.1404070962150836,
+      "category": "anomaly_low"
+    }
+  ]
+}

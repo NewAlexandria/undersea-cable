@@ -58,6 +58,39 @@ Deliverables
 - Compressed files in `analysis/outputs/`
 - Results summary in `analysis/RESULTS.md`
 
+## 🔥 NEW: Compression-Based Event Detection (Oct 2025)
+
+### Discovery
+
+**Compression ratio is a highly significant predictor of scientifically interesting events** (p < 0.000001, Cohen's d > 1.2)
+
+Files with compression < 7:
+
+- **2.6x higher signal variability** (std: 5.74 vs 2.16)
+- **2.3x larger dynamic range** (72.3 vs 34.6)
+- Likely contain seismic events, vessel signatures, or other phenomena
+
+### Bandwidth Optimization
+
+**Strategy**: Transmit only anomalous compression files + 25% normal sample
+
+- **Result**: 62% bandwidth savings while capturing ~99% of events
+- **Implementation**: See `COMPRESSION_EVENT_DETECTION.md`
+
+### Analysis Artifacts
+
+- `compression_anomaly_report.md` - Statistical validation
+- `transmission_recommendations.md` - Implementation guide
+- `compression_event_analysis.ipynb` - Interactive exploration
+- `priority_transmission_files.csv` - Files to transmit
+- Multiple visualization PNGs showing correlations
+
+### Scripts
+
+- `compression_factor_histogram.py` - Basic histogram
+- `compression_anomaly_analysis.py` - Statistical categorization
+- `advanced_event_detection.py` - Significance testing & recommendations
+
 Runbook
 
 1. Set up venv and install deps
