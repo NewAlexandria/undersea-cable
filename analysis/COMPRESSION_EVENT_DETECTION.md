@@ -242,12 +242,14 @@ Highly compressible data (compression ~14) typically represents:
 
 ## Business Impact
 
-### Cost Savings for Satellit Tx
+### Cost Savings for Satellite Transmission
+
+**Note**: These savings apply only if transmitting via satellite. Most submarine cables have fiber connectivity where bandwidth costs are much lower.
 
 - **Satellite bandwidth**: \$500-2000/GB
 - **Daily data volume**: ~500GB uncompressed
 - **With 63% reduction**: Save ~$5,000-$31,000 per day per site
-- **Annual savings per site**: $1.8M - $11M
+- **Annual savings per site**: $1.8M - $11M (satellite only)
 
 ### Operational Benefits
 

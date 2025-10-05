@@ -39,7 +39,7 @@ Hierarchical Data Format 5 - scientific data container supporting:
 - **[INFORMATION_THEORY_ANALYSIS.md](./INFORMATION_THEORY_ANALYSIS.md)** - Compression vs. vectorization trade-offs
 - **[analysis/COMPRESSION_EVENT_DETECTION.md](./analysis/COMPRESSION_EVENT_DETECTION.md)** - Event detection via compression ratio
 - **[DAS_BUSINESS_STRATEGY.md](./DAS_BUSINESS_STRATEGY.md)** - Market analysis and business model
-- **[GOOGLE_ENGINEER_DISCUSSION_GUIDE.md](./GOOGLE_ENGINEER_DISCUSSION_GUIDE.md)** - Technical validation questions
+- **[ENDINEER_DISCUSSION_GUIDE.md](./ENDINEER_DISCUSSION_GUIDE.md)** - Technical validation questions
 
 ### Key Findings
 
