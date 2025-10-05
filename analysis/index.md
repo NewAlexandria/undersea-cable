@@ -11,14 +11,14 @@ This section contains comprehensive analysis documentation for DAS maritime surv
 ## 📊 Core Analysis Documents
 
 ### Primary Analysis
-- **[Compression Event Detection](/analysis/COMPRESSION_EVENT_DETECTION/)** - Complete technical analysis of compression ratio as a proxy for event detection
-- **[Analysis Results](/analysis/RESULTS/)** - Detailed findings and data processing results from DAS data analysis
-- **[Solution Summary](/analysis/SOLUTION_SUMMARY/)** - Problem-solving documentation and error handling solutions
+- **[Compression Event Detection]({{ '/analysis/COMPRESSION_EVENT_DETECTION/' | relative_url }})** - Complete technical analysis of compression ratio as a proxy for event detection
+- **[Analysis Results]({{ '/analysis/RESULTS/' | relative_url }})** - Detailed findings and data processing results from DAS data analysis
+- **[Solution Summary]({{ '/analysis/SOLUTION_SUMMARY/' | relative_url }})** - Problem-solving documentation and error handling solutions
 
 ### Quick Reference Guides
-- **[Quick Reference](/analysis/artifacts/QUICK_REFERENCE/)** - Implementation quick-start guide for compression-based event detection
-- **[Analysis Summary](/analysis/artifacts/ANALYSIS_SUMMARY/)** - Executive summary of key findings and confidence assessment
-- **[Index](/analysis/artifacts/INDEX/)** - Navigation guide to all analysis artifacts
+- **[Quick Reference]({{ '/analysis/artifacts/QUICK_REFERENCE/' | relative_url }})** - Implementation quick-start guide for compression-based event detection
+- **[Analysis Summary]({{ '/analysis/artifacts/ANALYSIS_SUMMARY/' | relative_url }})** - Executive summary of key findings and confidence assessment
+- **[Index]({{ '/analysis/artifacts/INDEX/' | relative_url }})** - Navigation guide to all analysis artifacts
 
 ## 🔬 Technical Reports
 

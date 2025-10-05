@@ -13,7 +13,7 @@ plugins:
 
 # Site Settings
 baseurl: "/undersea-cable"
-url: "https://zak.github.io"
+url: "https://newalexandria.github.io"
 
 # Collections
 collections:
@@ -61,26 +61,28 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+      permalink: /:name/
   - scope:
       path: ""
       type: "docs"
     values:
       layout: "default"
+      permalink: /:name/
 
 # Navigation
 navigation:
   - title: "Home"
-    url: "/"
+    url: "/undersea-cable/"
   - title: "Executive Summary"
-    url: "/EXECUTIVE_SUMMARY/"
+    url: "/undersea-cable/EXECUTIVE_SUMMARY/"
   - title: "Architecture"
-    url: "/ARCHITECTURE_DECISION_SUMMARY/"
+    url: "/undersea-cable/ARCHITECTURE_DECISION_SUMMARY/"
   - title: "Analysis"
-    url: "/analysis/"
+    url: "/undersea-cable/analysis/"
   - title: "Business Strategy"
-    url: "/DAS_BUSINESS_STRATEGY/"
+    url: "/undersea-cable/DAS_BUSINESS_STRATEGY/"
   - title: "Technical Implementation"
-    url: "/DAS_TECHNICAL_IMPLEMENTATION/"
+    url: "/undersea-cable/DAS_TECHNICAL_IMPLEMENTATION/"
 
 # Social links
 social:
