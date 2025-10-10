@@ -11,15 +11,18 @@ This section covers business development, market strategy, and competitive posit
 ## Key Areas
 
 ### Core Strategy
+
 - **[DAS_BUSINESS_STRATEGY.md](./DAS_BUSINESS_STRATEGY.md)** - Complete business strategy and market analysis
 
 ### Customer Analysis
+
 - **[customer-requirements.md](./customer-requirements.md)** - Understanding customer needs
   - Feature priorities by segment
   - Pricing model preferences
   - Adoption drivers
 
 ### Competitive Landscape
+
 - **[competitive-landscape.md](./competitive-landscape.md)** - Market positioning
   - Key competitors
   - Defensible moats
@@ -28,13 +31,15 @@ This section covers business development, market strategy, and competitive posit
 ## Market Opportunity
 
 From the business strategy:
-- **Market Size**: $3.2B maritime security market growing at 7.3% CAGR
+
+- **Market Size**: \$3.2B maritime security market growing at 7.3% CAGR
 - **Our Advantage**: 1000x faster than satellites, 10x lower cost
 - **Target Segments**: Ports, Coast Guard, Environmental agencies, Research
 
 ## Business Model
 
 **Revenue Model**:
+
 - Subscription-based pricing per cable
 - Tiered by features and data retention
 - Professional services for integration

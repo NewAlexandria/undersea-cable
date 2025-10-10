@@ -11,18 +11,21 @@ This section addresses Section 3 of the [INTERNAL_DECISION_QUESTIONS.md](../INTE
 ## Key Partnership Areas
 
 ### Cable Operators
+
 - **[cable-operators/](./cable-operators/)** - Submarine cable operator partnerships
   - Access to cable landing stations
   - Customer introductions
   - Technical support
 
 ### Cloud Providers
+
 - **[cloud-providers/](./cloud-providers/)** - Strategic cloud partnerships
   - Startup credits ($100k-$500k typical)
   - Technical support and solutions architects
   - Co-selling opportunities
 
 ### System Integrators
+
 - **[system-integrators/](./system-integrators/)** - SI partnerships for enterprise sales
   - Defense contractors (Lockheed, Raytheon, etc.)
   - Maritime integrators (Kongsberg, Wartsila)
@@ -33,6 +36,7 @@ This section addresses Section 3 of the [INTERNAL_DECISION_QUESTIONS.md](../INTE
 From [INTERNAL_DECISION_QUESTIONS.md](../INTERNAL_DECISION_QUESTIONS.md#section-3-partner-engagement-strategy):
 
 **Milestones that trigger engagement**:
+
 - After technical validation complete?
 - After first lighthouse customer signed?
 - After Series A funding secured?

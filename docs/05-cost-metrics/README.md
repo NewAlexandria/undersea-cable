@@ -11,12 +11,14 @@ This section addresses Section 5 of the [INTERNAL_DECISION_QUESTIONS.md](../INTE
 ## Key Areas
 
 ### Cost Metrics
-- Cost per cable per month: Target $X
-- Cost per TB processed: Target $Y
-- Cost per vessel detection: Target $Z
+
+- Cost per cable per month: Target \$X
+- Cost per TB processed: Target \$Y
+- Cost per vessel detection: Target \$Z
 - Gross margin per cable: Target X%
 
 ### Cost Structure
+
 ```
 Total Cost per Cable
 ├── Edge Infrastructure
@@ -33,6 +35,7 @@ Total Cost per Cable
 ```
 
 ### Optimization Strategy
+
 - **[cost-optimization-strategy.md](./cost-optimization-strategy.md)** - Tiered storage and optimization approaches
 
 ## Dashboard Requirements
@@ -40,6 +43,7 @@ Total Cost per Cable
 From [INTERNAL_DECISION_QUESTIONS.md](../INTERNAL_DECISION_QUESTIONS.md#52-cost-dashboard-requirements):
 
 **Dashboards needed**:
+
 - Executive: Total cost, cost per cable, gross margin (monthly)
 - Engineering: Cloud costs by service, utilization (daily)
 - Operations: Edge costs, bandwidth, outages (real-time)
