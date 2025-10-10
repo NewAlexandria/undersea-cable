@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAS Maritime Surveillance - Monte Carlo Simulator</title>
+    <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 0;
+            min-height: 800px;
+        }
+        
+        .sidebar {
+            background: #f8f9fa;
+            padding: 30px;
+            border-right: 1px solid #e0e0e0;
+            overflow-y: auto;
+            max-height: calc(100vh - 200px);
+        }
+        
+        .main {
+            padding: 30px;
+            overflow-y: auto;
+            max-height: calc(100vh - 200px);
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section h3 {
+            color: #2a5298;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            border-bottom: 2px solid #2a5298;
+            padding-bottom: 8px;
+        }
+        
+        .input-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        input[type="number"], input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="number"]:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .preset-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .preset-btn {
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: all 0.3s;
+        }
+        
+        .preset-btn:hover {
+            background: #f0f0f0;
+            border-color: #667eea;
+        }
+        
+        .run-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-top: 20px;
+        }
+        
+        .run-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .run-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .results-container {
+            display: none;
+        }
+        
+        .results-container.visible {
+            display: block;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .metric-card h4 {
+            color: #555;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .metric-value {
+            font-size: 2em;
+            font-weight: 700;
+            color: #2a5298;
+            margin-bottom: 5px;
+        }
+        
+        .metric-range {
+            font-size: 0.85em;
+            color: #777;
+        }
+        
+        .success-metric {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+        }
+        
+        .warning-metric {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+        }
+        
+        .danger-metric {
+            background: linear-gradient(135deg, #fab1a0 0%, #fd79a8 100%);
+        }
+        
+        .chart {
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .loading.visible {
+            display: block;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .help-text {
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌊 DAS Maritime Surveillance</h1>
+            <p>Monte Carlo Business Simulator - Strategic Planning Tool</p>
+        </header>
+        
+        <div class="content">
+            <div class="sidebar">
+                <div class="section">
+                    <h3>📋 Presets</h3>
+                    <div class="preset-buttons">
+                        <button class="preset-btn" onclick="loadPreset('base_case')">Base Case</button>
+                        <button class="preset-btn" onclick="loadPreset('conservative')">Conservative</button>
+                        <button class="preset-btn" onclick="loadPreset('aggressive')">Aggressive</button>
+                        <button class="preset-btn" onclick="loadPreset('premium')">Premium</button>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3>🏗️ Architecture</h3>
+                    <div class="input-group">
+                        <label for="architecture">Architecture Option</label>
+                        <select id="architecture">
+                            <option value="C">Option C: Cloud Only</option>
+                            <option value="B">Option B: Regional Datacenter</option>
+                            <option value="A">Option A: GPU at Edge</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="series_a">Series A Funding ($)</label>
+                        <input type="number" id="series_a" value="10000000" step="1000000">
+                    </div>
+                    <div class="input-group">
+                        <label for="cloud_credits">Cloud Credits ($)</label>
+                        <input type="number" id="cloud_credits" value="250000" step="50000">
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3>📈 Growth Strategy</h3>
+                    <div class="input-group">
+                        <label for="initial_cables">Initial Cables</label>
+                        <input type="number" id="initial_cables" value="3" min="1" max="10">
+                    </div>
+                    <div class="input-group">
+                        <label for="target_m6">Target @ Month 6</label>
+                        <input type="number" id="target_m6" value="5" min="1">
+                    </div>
+                    <div class="input-group">
+                        <label for="target_m12">Target @ Month 12</label>
+                        <input type="number" id="target_m12" value="15" min="1">
+                    </div>
+                    <div class="input-group">
+                        <label for="target_m18">Target @ Month 18</label>
+                        <input type="number" id="target_m18" value="30" min="1">
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3>💰 Pricing (Monthly)</h3>
+                    <div class="input-group">
+                        <label for="price_port">Port Authority</label>
+                        <input type="number" id="price_port" value="35000" step="5000">
+                    </div>
+                    <div class="input-group">
+                        <label for="price_naval">Naval/Military</label>
+                        <input type="number" id="price_naval" value="500000" step="50000">
+                    </div>
+                    <div class="input-group">
+                        <label for="price_env">Environmental</label>
+                        <input type="number" id="price_env" value="10000" step="1000">
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3>👥 Team</h3>
+                    <div class="input-group">
+                        <label for="initial_team">Initial Team Size</label>
+                        <input type="number" id="initial_team" value="5" min="1" max="20">
+                    </div>
+                    <div class="input-group">
+                        <label for="team_growth">Growth Rate (6 months)</label>
+                        <input type="number" id="team_growth" value="1.5" step="0.1" min="1" max="3">
+                        <span class="help-text">Multiply factor every 6 months</span>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3>🎲 Simulation</h3>
+                    <div class="input-group">
+                        <label for="num_sims">Number of Simulations</label>
+                        <input type="number" id="num_sims" value="1000" min="100" max="10000" step="100">
+                        <span class="help-text">More = slower but more accurate</span>
+                    </div>
+                    <div class="input-group">
+                        <label for="sim_months">Simulation Months</label>
+                        <input type="number" id="sim_months" value="24" min="12" max="60">
+                    </div>
+                </div>
+                
+                <button class="run-button" onclick="runSimulation()" id="runBtn">
+                    🚀 Run Simulation
+                </button>
+            </div>
+            
+            <div class="main">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Running Monte Carlo simulation...</p>
+                    <p style="color: #888; font-size: 0.9em; margin-top: 10px;">This may take 10-30 seconds</p>
+                </div>
+                
+                <div class="results-container" id="results">
+                    <h2 style="margin-bottom: 20px; color: #2a5298;">Simulation Results</h2>
+                    
+                    <div class="metrics-grid" id="metricsGrid"></div>
+                    
+                    <div class="chart">
+                        <h3 style="margin-bottom: 15px;">Revenue & Costs Over Time</h3>
+                        <div id="revenueChart"></div>
+                    </div>
+                    
+                    <div class="chart">
+                        <h3 style="margin-bottom: 15px;">Cash Position Over Time</h3>
+                        <div id="cashChart"></div>
+                    </div>
+                    
+                    <div class="chart">
+                        <h3 style="margin-bottom: 15px;">Cables Deployed & Customers</h3>
+                        <div id="growthChart"></div>
+                    </div>
+                    
+                    <div class="chart">
+                        <h3 style="margin-bottom: 15px;">Team Size & Infrastructure</h3>
+                        <div id="teamChart"></div>
+                    </div>
+                    
+                    <div class="chart">
+                        <h3 style="margin-bottom: 15px;">Detection Accuracy & System Uptime</h3>
+                        <div id="technicalChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentResults = null;
+        
+        async function loadPreset(presetName) {
+            try {
+                const response = await fetch('/api/presets');
+                const presets = await response.json();
+                const preset = presets[presetName];
+                
+                if (!preset) return;
+                
+                // Load preset values
+                if (preset.architecture_option) document.getElementById('architecture').value = preset.architecture_option;
+                if (preset.series_a_funding) document.getElementById('series_a').value = preset.series_a_funding;
+                if (preset.target_cables_month_12) document.getElementById('target_m12').value = preset.target_cables_month_12;
+                if (preset.target_cables_month_18) document.getElementById('target_m18').value = preset.target_cables_month_18;
+                if (preset.pricing_port) document.getElementById('price_port').value = preset.pricing_port;
+                if (preset.pricing_naval) document.getElementById('price_naval').value = preset.pricing_naval;
+                
+                alert(`Loaded preset: ${preset.name}\n${preset.description}`);
+            } catch (error) {
+                console.error('Error loading preset:', error);
+            }
+        }
+        
+        async function runSimulation() {
+            const runBtn = document.getElementById('runBtn');
+            const loading = document.getElementById('loading');
+            const results = document.getElementById('results');
+            
+            // Show loading
+            runBtn.disabled = true;
+            loading.classList.add('visible');
+            results.classList.remove('visible');
+            
+            // Gather inputs
+            const request = {
+                architecture_option: document.getElementById('architecture').value,
+                series_a_funding: parseFloat(document.getElementById('series_a').value),
+                cloud_credits_secured: parseFloat(document.getElementById('cloud_credits').value),
+                initial_cables: parseInt(document.getElementById('initial_cables').value),
+                target_cables_month_6: parseInt(document.getElementById('target_m6').value),
+                target_cables_month_12: parseInt(document.getElementById('target_m12').value),
+                target_cables_month_18: parseInt(document.getElementById('target_m18').value),
+                pricing_port: parseFloat(document.getElementById('price_port').value),
+                pricing_naval: parseFloat(document.getElementById('price_naval').value),
+                pricing_environmental: parseFloat(document.getElementById('price_env').value),
+                initial_team_size: parseInt(document.getElementById('initial_team').value),
+                team_growth_rate: parseFloat(document.getElementById('team_growth').value),
+                num_simulations: parseInt(document.getElementById('num_sims').value),
+                simulation_months: parseInt(document.getElementById('sim_months').value)
+            };
+            
+            try {
+                const response = await fetch('/api/simulate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(request)
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Simulation failed');
+                }
+                
+                const data = await response.json();
+                currentResults = data;
+                
+                // Display results
+                displayResults(data);
+                
+            } catch (error) {
+                alert('Error running simulation: ' + error.message);
+                console.error(error);
+            } finally {
+                runBtn.disabled = false;
+                loading.classList.remove('visible');
+            }
+        }
+        
+        function displayResults(data) {
+            const results = document.getElementById('results');
+            results.classList.add('visible');
+            
+            // Display metrics cards
+            displayMetricsCards(data.analysis);
+            
+            // Display charts
+            displayCharts(data.sample_trajectories);
+        }
+        
+        function displayMetricsCards(analysis) {
+            const grid = document.getElementById('metricsGrid');
+            const success = analysis.success_metrics;
+            const final = analysis.final_metrics;
+            
+            const metrics = [
+                {
+                    title: 'Success Rate',
+                    value: (success.profitability_rate * 100).toFixed(1) + '%',
+                    range: `${analysis.num_simulations} simulations`,
+                    class: success.profitability_rate > 0.7 ? 'success-metric' : 
+                           success.profitability_rate > 0.4 ? 'warning-metric' : 'danger-metric'
+                },
+                {
+                    title: 'Series B Qualified',
+                    value: (success.series_b_qualified_rate * 100).toFixed(1) + '%',
+                    range: '$30M ARR, 15+ cables',
+                    class: success.series_b_qualified_rate > 0.5 ? 'success-metric' : 'warning-metric'
+                },
+                {
+                    title: 'Failure Rate',
+                    value: (success.failure_rate * 100).toFixed(1) + '%',
+                    range: 'Ran out of cash',
+                    class: success.failure_rate < 0.2 ? 'success-metric' : 
+                           success.failure_rate < 0.4 ? 'warning-metric' : 'danger-metric'
+                },
+                {
+                    title: 'Avg Cables (Final)',
+                    value: final.cables_deployed.median.toFixed(0),
+                    range: `P10: ${final.cables_deployed.p10.toFixed(0)}, P90: ${final.cables_deployed.p90.toFixed(0)}`,
+                    class: 'metric-card'
+                },
+                {
+                    title: 'Avg Customers (Final)',
+                    value: final.total_customers.median.toFixed(0),
+                    range: `P10: ${final.total_customers.p10.toFixed(0)}, P90: ${final.total_customers.p90.toFixed(0)}`,
+                    class: 'metric-card'
+                },
+                {
+                    title: 'ARR (Final)',
+                    value: '$' + (final.arr.median / 1_000_000).toFixed(1) + 'M',
+                    range: `P10: $${(final.arr.p10/1e6).toFixed(1)}M, P90: $${(final.arr.p90/1e6).toFixed(1)}M`,
+                    class: 'metric-card'
+                },
+                {
+                    title: 'Cash Remaining',
+                    value: '$' + (final.cash_remaining.median / 1_000_000).toFixed(1) + 'M',
+                    range: `P10: $${(final.cash_remaining.p10/1e6).toFixed(1)}M, P90: $${(final.cash_remaining.p90/1e6).toFixed(1)}M`,
+                    class: final.cash_remaining.median > 0 ? 'success-metric' : 'danger-metric'
+                },
+                {
+                    title: 'Team Size (Final)',
+                    value: final.team_size.median.toFixed(0),
+                    range: `P10: ${final.team_size.p10.toFixed(0)}, P90: ${final.team_size.p90.toFixed(0)}`,
+                    class: 'metric-card'
+                }
+            ];
+            
+            grid.innerHTML = metrics.map(m => `
+                <div class="metric-card ${m.class}">
+                    <h4>${m.title}</h4>
+                    <div class="metric-value">${m.value}</div>
+                    <div class="metric-range">${m.range}</div>
+                </div>
+            `).join('');
+        }
+        
+        function displayCharts(trajectories) {
+            // Revenue & Costs Chart
+            const revenueTraces = [];
+            const labels = ['P10 (Pessimistic)', 'P50 (Median)', 'P90 (Optimistic)'];
+            const colors = ['#e74c3c', '#3498db', '#2ecc71'];
+            
+            trajectories.forEach((traj, idx) => {
+                revenueTraces.push({
+                    x: traj.months,
+                    y: traj.revenue_monthly,
+                    name: `Revenue ${labels[idx]}`,
+                    line: { color: colors[idx] }
+                });
+                revenueTraces.push({
+                    x: traj.months,
+                    y: traj.costs_monthly,
+                    name: `Costs ${labels[idx]}`,
+                    line: { color: colors[idx], dash: 'dash' }
+                });
+            });
+            
+            Plotly.newPlot('revenueChart', revenueTraces, {
+                yaxis: { title: 'Monthly ($)' },
+                xaxis: { title: 'Month' },
+                hovermode: 'x unified'
+            });
+            
+            // Cash Chart
+            const cashTraces = trajectories.map((traj, idx) => ({
+                x: traj.months,
+                y: traj.cash_remaining,
+                name: labels[idx],
+                line: { color: colors[idx] }
+            }));
+            
+            Plotly.newPlot('cashChart', cashTraces, {
+                yaxis: { title: 'Cash Remaining ($)' },
+                xaxis: { title: 'Month' },
+                hovermode: 'x unified'
+            });
+            
+            // Growth Chart
+            const growthTraces = [];
+            trajectories.forEach((traj, idx) => {
+                growthTraces.push({
+                    x: traj.months,
+                    y: traj.cables_deployed,
+                    name: `Cables ${labels[idx]}`,
+                    yaxis: 'y',
+                    line: { color: colors[idx] }
+                });
+                growthTraces.push({
+                    x: traj.months,
+                    y: traj.total_customers,
+                    name: `Customers ${labels[idx]}`,
+                    yaxis: 'y2',
+                    line: { color: colors[idx], dash: 'dot' }
+                });
+            });
+            
+            Plotly.newPlot('growthChart', growthTraces, {
+                yaxis: { title: 'Cables Deployed' },
+                yaxis2: { title: 'Total Customers', overlaying: 'y', side: 'right' },
+                xaxis: { title: 'Month' },
+                hovermode: 'x unified'
+            });
+            
+            // Team Chart
+            const teamTraces = [];
+            trajectories.forEach((traj, idx) => {
+                teamTraces.push({
+                    x: traj.months,
+                    y: traj.team_size_total,
+                    name: `Team ${labels[idx]}`,
+                    yaxis: 'y',
+                    line: { color: colors[idx] }
+                });
+                teamTraces.push({
+                    x: traj.months,
+                    y: traj.regional_datacenters,
+                    name: `Datacenters ${labels[idx]}`,
+                    yaxis: 'y2',
+                    line: { color: colors[idx], dash: 'dash' }
+                });
+            });
+            
+            Plotly.newPlot('teamChart', teamTraces, {
+                yaxis: { title: 'Team Size' },
+                yaxis2: { title: 'Regional Datacenters', overlaying: 'y', side: 'right' },
+                xaxis: { title: 'Month' },
+                hovermode: 'x unified'
+            });
+            
+            // Technical Chart
+            const technicalTraces = [];
+            trajectories.forEach((traj, idx) => {
+                technicalTraces.push({
+                    x: traj.months,
+                    y: traj.detection_accuracy.map(v => v * 100),
+                    name: `Accuracy ${labels[idx]}`,
+                    line: { color: colors[idx] }
+                });
+            });
+            
+            Plotly.newPlot('technicalChart', technicalTraces, {
+                yaxis: { title: 'Detection Accuracy (%)', range: [90, 100] },
+                xaxis: { title: 'Month' },
+                hovermode: 'x unified'
+            });
+        }
+    </script>
+</body>
+</html>

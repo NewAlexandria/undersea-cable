@@ -24,22 +24,18 @@ Hierarchical Data Format 5 - scientific data container supporting:
 - Multi-dimensional arrays
 - Cross-platform compatibility
 
-## Architecture Documentation
+## Documentation
 
-**Quick Start**: See [ARCHITECTURE_DECISION_SUMMARY.md](./ARCHITECTURE_DECISION_SUMMARY.md) for choosing between CPU/GPU architectures.
+**All documentation has been reorganized**: See [docs/](./docs/) for the complete structured documentation.
 
-### Technical Architecture
+**Quick Start**: See [docs/02-architectural-decisions/ARCHITECTURE_DECISION_SUMMARY.md](./docs/02-architectural-decisions/ARCHITECTURE_DECISION_SUMMARY.md) for choosing between CPU/GPU architectures.
 
-- **[DAS_MARITIME_ARCHITECTURE.md](./DAS_MARITIME_ARCHITECTURE.md)** - GPU-at-edge system architecture
-- **[DAS_CPU_ARCHITECTURE_ALTERNATIVE.md](./DAS_CPU_ARCHITECTURE_ALTERNATIVE.md)** - CPU-based compress-first strategy (cost-optimized)
-- **[DAS_TECHNICAL_IMPLEMENTATION.md](./DAS_TECHNICAL_IMPLEMENTATION.md)** - Implementation details
+### Key Documents
 
-### Analysis & Strategy
-
-- **[INFORMATION_THEORY_ANALYSIS.md](./INFORMATION_THEORY_ANALYSIS.md)** - Compression vs. vectorization trade-offs
-- **[analysis/COMPRESSION_EVENT_DETECTION.md](./analysis/COMPRESSION_EVENT_DETECTION.md)** - Event detection via compression ratio
-- **[DAS_BUSINESS_STRATEGY.md](./DAS_BUSINESS_STRATEGY.md)** - Market analysis and business model
-- **[ENDINEER_DISCUSSION_GUIDE.md](./ENDINEER_DISCUSSION_GUIDE.md)** - Technical validation questions
+- **[docs/00-overview/EXECUTIVE_SUMMARY.md](./docs/00-overview/EXECUTIVE_SUMMARY.md)** - Executive summary and business case
+- **[docs/INTERNAL_DECISION_QUESTIONS.md](./docs/INTERNAL_DECISION_QUESTIONS.md)** - Master planning document with 87 critical questions
+- **[docs/01-technical-validation/](./docs/01-technical-validation/)** - Technical feasibility and validation
+- **[docs/06-business-strategy/](./docs/06-business-strategy/)** - Market analysis and business model
 
 ### Key Findings
 
